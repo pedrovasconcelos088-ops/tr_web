@@ -1,0 +1,160 @@
+body{
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*estilização do header*/
+header{
+    background-color: rgb(20, 20, 20);
+}
+
+/*estilização do logo*/
+.logo{
+    width: 5%; 
+    padding: 10px 0 30px 5%;
+}
+/*estilização do menu*/
+nav{
+    color: rgb(236, 226, 226);
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav li{
+    display: inline;
+    margin-right: 40px;
+}
+
+nav li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color: rgb(64, 127, 199);
+}
+
+.divHeader{
+    position: relative;
+}
+.banner{
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+/*Estilização de TITULOS*/
+.titulos {
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+}
+
+.img_sobre_nos{
+    width: 15%;
+    float: left;
+    margin-right: 25px;
+}
+.titulo_sobre_nos{
+    clear: left;
+}
+/*Estilização do Sobre nós*/
+.sobre_nos{
+    width: 60%;  
+    text-align: justify;
+    margin-left: 20%;
+    line-height: 1.5;
+}
+
+.mapa{
+    text-align: center;
+}
+/*Estilização da sessão NOSSO ESTABELECIMENTO*/
+.mapa {
+    text-align: center;
+    background: linear-gradient(#ffffff,#ffffff,#ffffff);
+}
+/* sessão produtos */
+
+.produtos{
+    text-align: center;
+    padding: 40px;
+}
+
+.lista_produtos{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.produto{
+    width: 200px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.produto img{
+    width: 100%;
+}
+
+.produto h3{
+    margin-top: 10px;
+}
+
+.video{
+    text-align: center;
+    background: linear-gradient(#757171);
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .logo_footer {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer i {
+    margin-right: 5px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer .logo_footer {
+        width: 90px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}

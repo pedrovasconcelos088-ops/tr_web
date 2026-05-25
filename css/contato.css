@@ -1,0 +1,135 @@
+/* Configuração básica do corpo de contatos */
+.contato-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Garante que o conteúdo ocupe a tela e não esmague */
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+}
+
+/* Container que divide as duas colunas */
+.contato-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Títulos das colunas (Estilo limpo da Puma) */
+.contato-info h2, 
+.contato-formulario h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Deixa em caixa alta para impor mais a marca */
+    letter-spacing: 1px;
+}
+
+/* --- COLUNA DA ESQUERDA (INFORMAÇÕES) --- */
+.contato-info {
+    flex: 1;
+}
+
+.contato-info .endereco {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+/* Área das redes sociais em círculos */
+.redes-sociais {
+    display: flex;
+    gap: 12px;
+}
+
+.rede-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #222222;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%; /* Faz o círculo perfeito */
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.rede-icone:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+/* --- COLUNA DA DIREITA (FORMULÁRIO) --- */
+.contato-formulario {
+    flex: 1.2; /* Dá um pouco mais de espaço para o formulário */
+}
+
+.input-grupo {
+    margin-bottom: 15px;
+}
+
+/* Estilização dos inputs e caixas de texto igual à imagem */
+.contato-formulario input, 
+.contato-formulario textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #f1f1f1; /* Fundo cinza claro idêntico à imagem */
+    font-size: 15px;
+    color: #333333;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+/* Efeito de foco quando o usuário clica para digitar */
+.contato-formulario input:focus, 
+.contato-formulario textarea:focus {
+    background-color: #e5e5e5;
+    border-left: 3px solid #000000; /* Detalhe preto da Puma ao focar */
+}
+
+/* Impedir que o usuário deforme a caixa de texto */
+.contato-formulario textarea {
+    resize: none;
+}
+
+/* Botão Enviar com borda sutil e elegante */
+.btn-enviar {
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 12px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Efeito de hover invertido no botão (Puma Style) */
+.btn-enviar:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* --- RESPONSIVIDADE (PARA CELULARES) --- */
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column; /* Empilha as colunas */
+        gap: 40px;
+    }
+    
+    .contato-info, .contato-formulario {
+        width: 100%;
+    }
+}

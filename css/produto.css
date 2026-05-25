@@ -1,0 +1,132 @@
+/* ==================== NAV E TÍTULOS ==================== */
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: rgb(64, 127, 199);
+}
+
+.produtos-titulos {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    font-family: cursive;
+    list-style: none;
+}
+
+.produtos-titulos li:before {
+    content: "🛒 ";
+}
+
+.dataAtual {
+    text-align: right;
+    font-size: 24px;
+    margin-right: 20px;
+    color: navy;
+}
+
+/* ==================== LAYOUT E CARD ==================== */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adicionado para dar espaçamento entre os cards */
+    padding-bottom: 20px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    /* CORRIGIDO: de black(...) para rgba(...) para a sombra funcionar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    
+    /* Garante que os botões fiquem alinhados embaixo mesmo se o título for longo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* REMOVIDO: .card:hover { transform: scale(1.05); } 
+   Isso dava a impressão de que o card todo era um único botão. */
+
+
+/* ==================== ELEMENTOS DO PRODUTO ==================== */
+
+/* Imagem do Produto (Clicável) */
+.card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer; /* Faz aparecer a mãozinha de clique */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito de zoom apenas na foto ao passar o mouse */
+.card img:hover {
+    transform: scale(1.03);
+}
+
+/* Título do Produto (Clicável) */
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    cursor: pointer; /* Faz aparecer a mãozinha de clique */
+    transition: color 0.2s;
+}
+
+/* Efeito sutil no título ao passar o mouse */
+.card h2:hover {
+    color: rgb(64, 127, 199);
+    text-decoration: underline;
+}
+
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+    margin-bottom: 10px;
+}
+
+
+/* ==================== BOTÃO DO CARRINHO ==================== */
+.add-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+    margin-top: auto; /* Empurra o botão sempre para o fim do card */
+    padding: 10px;
+    background-color: #f4f4f4; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Efeito ao passar o mouse no botão */
+.add-carrinho:hover {
+    background-color: #e0e0e0;
+}
+
+/* Efeito de clique físico no botão */
+.add-carrinho:active {
+    transform: scale(0.97);
+}
+
+/* Força o tamanho pequeno para o ícone */
+.icone-carrinho {
+    width: 20px !important; 
+    height: 20px !important;
+}
+
+/* Estilo do texto "Adicionar ao carrinho" */
+.add-carrinho span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
